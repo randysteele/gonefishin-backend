@@ -10,12 +10,12 @@ class DestinationsInput extends React.Component {
         city: '', 
         state: '', 
         description: ''
-}
+} // here we set local state with name, city, state and description keys of which the values are empty strings. 
 
     handleChange = (event) => {
         this.setState({
            [event.target.name]: event.target.value
-        })
+        }) // when this event is called we want to update state, so we called setState and update state to the value of the name keys. 
     }
 
 
@@ -27,7 +27,7 @@ class DestinationsInput extends React.Component {
         city: '', 
         state: '', 
         description: ''
-
+        // handle submit will update the state when a user submits a new destination. 
        })    
     }
 
@@ -37,6 +37,7 @@ class DestinationsInput extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}> 
+            //  //calling handle submit so we know when the user has submitted the form and we can now update the state with the updated data.
                 <label>Lake Name: </label>
                 <input type="text" placeholder="Lake Name: " value={this.state.name} name="name" onChange={this.handleChange}></input>
                 <label>City: </label>   
@@ -46,6 +47,7 @@ class DestinationsInput extends React.Component {
                 <label>Description: </label>   
                 <textarea  type="text" placeholder="Description: " value={this.state.description} name="description"  onChange={this.handleChange}>
                 </textarea>
+             //calling handle change so we know when the user has typed.
                 <input type="submit"/>
                 </form>
             </div>
@@ -54,3 +56,4 @@ class DestinationsInput extends React.Component {
 }
 
 export default connect(null, {addDestination})(DestinationsInput)
+// addDestination is the mapDispatchToProps equilevant. This calls our asynchronour addDestination action which dispatch will send to the store. 
