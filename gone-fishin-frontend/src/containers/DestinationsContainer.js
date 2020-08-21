@@ -42,3 +42,16 @@ const mapStateToProps = state => {
 }
 export default connect(mapStateToProps, {fetchDestinations})(DestinationsContainer);
 // connecting to the store and passing mapStateToProps as well as fetchDestinations. 
+//the mapStateToProps() method is executed with each change to the store's state.
+//whatever function we pass to the connect() function will be called each time the state changes, 
+//and the first argument to that function, whatever its name, will be the state of the store.
+
+//connect() takes whatever the return value is of the mapStateToProps() 
+//function and passes it to the component that is in those last set of parentheses (in this case, DestinationsContainer).
+//mapStateToProps helps us seperate concerns becuase we no longer have to pass our store in our components
+
+
+// fetchDestinaitons AKA mapDispatchToProps works the same as mapStateToProps but instead of passing in state it passes in the dispatch function. 
+
+//By default mapDispatchToProps is just dispatch => ({ dispatch }). So if you don't specify the second argument to connect(), you'll get dispatch 
+//injected as a prop in your component.
