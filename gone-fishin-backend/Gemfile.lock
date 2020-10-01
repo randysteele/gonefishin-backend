@@ -84,6 +84,7 @@ GEM
       activesupport
     concurrent-ruby (1.1.6)
     crass (1.0.6)
+    daemons (1.3.1)
     devise (4.7.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -148,6 +149,8 @@ GEM
     pg (1.2.3)
     polyamorous (2.3.2)
       activerecord (>= 5.2.1)
+    postman (0.1.0)
+      daemons (>= 1.0.10)
     puma (4.3.5)
       nio4r (~> 2.0)
     rack (2.2.3)
@@ -237,6 +240,7 @@ DEPENDENCIES
   foreman
   listen (~> 3.2)
   pg
+  postman
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.3, >= 6.0.3.1)
