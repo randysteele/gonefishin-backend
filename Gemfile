@@ -28,15 +28,26 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
 gem 'active_model_serializers'
 
+<<<<<<< HEAD
+=======
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pg'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+>>>>>>> 0d4fa6ec22b3160c6b7478e0a0145c9cce4d8fb3
 
 group :development do
   gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+<<<<<<< HEAD
     gem 'pg'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
+=======
+>>>>>>> 0d4fa6ec22b3160c6b7478e0a0145c9cce4d8fb3
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -50,9 +61,21 @@ group :production do
 end
 
 # ActiveAdmin
+<<<<<<< HEAD
 # gem 'devise'
 # gem 'activeadmin'
 # gem 'postman'
 # begin
 
+=======
+gem 'devise'
+gem 'activeadmin'
+gem 'postman'
+begin
+
+  require 'minitest/autorun'
+rescue LoadError => e
+  raise e unless ENV['RAILS_ENV'] == "production"
+end
+>>>>>>> 0d4fa6ec22b3160c6b7478e0a0145c9cce4d8fb3
 
