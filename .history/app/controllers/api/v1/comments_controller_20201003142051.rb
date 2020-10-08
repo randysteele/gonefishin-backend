@@ -1,6 +1,4 @@
 class Api::V1::CommentsController < ApplicationController
-
-    skip_before_action :verify_authenticity_token
     before_action :set_destination
     def index
         @comments = Comment.all

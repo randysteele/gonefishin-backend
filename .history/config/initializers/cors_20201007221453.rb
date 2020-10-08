@@ -8,6 +8,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins 'https://gonefishinbackend.herokuapp.com/api/v1/destinations'
+    headers: :any
     
     resource '*',
       headers: :any,

@@ -1,7 +1,5 @@
 class Api::V1::DestinationsController < ApplicationController
 
-    skip_before_action :verify_authenticity_token
-
     def index
         @destinations = Destination.all
         render json: @destinations        
