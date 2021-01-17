@@ -10,3 +10,4 @@ dest1 = Destination.create(name: "Island Fishing Lakes", city: "Hamilton", state
 bait = Feature.create(name: "bait shop", destination_id: dest1.id)
 comment1 = Comment.create(content: "This place is great", destination_id: dest1.id)
 featuretwo = Feature.create(name: "playground", destination_id: dest1.id)
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
